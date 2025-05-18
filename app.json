@@ -13,17 +13,34 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyB10NtNJ4fOaszwh0b351iIAD8jqRJE5q8"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.mahiboob.TravelMate",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBMmaVajzb7O1CbFEGUqM-mYNtFVYG8HOo"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b60d1615-53e1-4838-8844-9eabb8479bf0"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
