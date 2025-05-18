@@ -12,7 +12,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db, storage } from '../../services/firebaseConfig';
 import Colors from '../../constant/colors';
 import Fonts from '../../constant/fonts';
-import { OPENROUTER_API_KEY } from '@env';
 
 const NewJournalScreen = ({ navigation }) => {
     const [title, setTitle] = useState('');
@@ -74,7 +73,7 @@ const NewJournalScreen = ({ navigation }) => {
             const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
                 method: 'POST',
                 headers: {
-                    Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+                    Authorization: 'Bearer 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',
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
@@ -89,6 +88,7 @@ const NewJournalScreen = ({ navigation }) => {
                 setSummary(data.choices[0].message.content);
             } else if (data?.error?.message) {
                 Alert.alert('API Error', data.error.message);
+                console.log('API Error', data)
             } else {
                 Alert.alert('Unexpected response format');
             }
