@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ActivityIndicator } from 'react-native';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../services/firebaseConfig';
+import Fonts from '../../constant/fonts';
+import Colors from '../../constant/colors';
+
 
 
 const SignupScreen = ({ navigation }) => {
@@ -58,10 +61,43 @@ const SignupScreen = ({ navigation }) => {
 export default SignupScreen;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 24, justifyContent: 'center', backgroundColor: '#fff' },
-  title: { fontSize: 32, fontWeight: 'bold', textAlign: 'center', marginBottom: 24 },
-  input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 12, marginBottom: 16 },
-  button: { backgroundColor: '#26695c', padding: 14, borderRadius: 8, alignItems: 'center' },
-  buttonText: { color: '#fff', fontSize: 16 },
-  linkText: { color: '#26695c', textAlign: 'center', marginTop: 16 },
+  container: {
+    flex: 1,
+    padding: 24,
+    justifyContent: 'center',
+    backgroundColor: Colors.background,
+  },
+  title: {
+    fontSize: 32,
+    fontFamily: Fonts.Bold,
+    color: Colors.primary,
+    textAlign: 'center',
+    marginBottom: 24,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: Colors.lightGray,
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 16,
+    fontFamily: Fonts.Regular,
+    color: Colors.text,
+  },
+  button: {
+    backgroundColor: Colors.primary,
+    padding: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: Colors.white,
+    fontSize: 16,
+    fontFamily: Fonts.Medium,
+  },
+  linkText: {
+    color: Colors.primary,
+    textAlign: 'center',
+    marginTop: 16,
+    fontFamily: Fonts.Medium,
+  },
 });
