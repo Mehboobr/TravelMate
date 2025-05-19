@@ -12,6 +12,8 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db, storage } from '../../services/firebaseConfig';
 import Colors from '../../constant/colors';
 import Fonts from '../../constant/fonts';
+import { OPENROUTER_API_KEY } from '../../apiKeys/keys';
+
 
 const NewJournalScreen = ({ navigation }) => {
     const [title, setTitle] = useState('');
@@ -69,11 +71,12 @@ const NewJournalScreen = ({ navigation }) => {
 
     const generateSummary = async () => {
         setGenerating(true);
+        console.log('OPENROUTER_API_KEY',OPENROUTER_API_KEY)
         try {
             const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
                 method: 'POST',
                 headers: {
-                    Authorization: 'Bearer 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',
+                    Authorization: `Bearer ${OPENROUTER_API_KEY}`,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({

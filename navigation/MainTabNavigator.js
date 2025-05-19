@@ -16,7 +16,7 @@ const MainTabNavigator = () => (
             headerShown: true,
             tabBarActiveTintColor: Colors.primary,
             tabBarInactiveTintColor: 'gray',
-            tabBarStyle: { paddingBottom: 80, paddingTop: 6, height: 90 },
+            tabBarStyle: { paddingBottom: 10, paddingTop: 6, height: 70 },
             tabBarIcon: ({ color, size }) => {
                 let iconName;
 

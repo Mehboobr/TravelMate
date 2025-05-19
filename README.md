@@ -56,3 +56,10 @@ eas build -p android --profile production
 
 **Make sure you are logged into Expo before running the build:**
 eas login
+
+
+
+🔑 Note on AI Summarization Feature:
+A test API key was used for the AI summary functionality. Once the free tier usage limit is reached, you will need to generate a new API key from https://openrouter.ai/settings/keys and update it in the ./apiKeys/keys.js file under the key:
+
+OPENROUTER_API_KEY=your-new-key
