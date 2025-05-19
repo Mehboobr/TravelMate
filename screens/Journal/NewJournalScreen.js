@@ -73,7 +73,7 @@ const NewJournalScreen = ({ navigation }) => {
             const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
                 method: 'POST',
                 headers: {
-                    Authorization: 'Bearer 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',
+                    Authorization: 'Bearer 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',
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
